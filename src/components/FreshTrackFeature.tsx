@@ -21,11 +21,11 @@ export const FreshTrackFeature = () => {
             <span className="inline-block px-4 py-2 rounded-full bg-sunrise-orange/10 text-sunrise-orange text-sm font-semibold mb-6">
               Featured Product
             </span>
-            
+
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
               FreshTrack
             </h2>
-            
+
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
               Stop wasting food. Track grocery expiry dates instantly and save money.
             </p>
@@ -51,17 +51,26 @@ export const FreshTrackFeature = () => {
               ))}
             </ul>
 
-            <motion.a
-              href="https://play.google.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              className="btn-sunrise inline-flex items-center gap-3"
-            >
-              <Play size={20} className="relative z-10" />
-              <span className="relative z-10">Download on Google Play</span>
-            </motion.a>
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+              <motion.a
+                href="https://play.google.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="btn-sunrise inline-flex items-center gap-3"
+              >
+                <Play size={20} className="relative z-10" />
+                <span className="relative z-10">Download on Google Play</span>
+              </motion.a>
+
+              <a
+                href="/privacy/freshtrack"
+                className="text-muted-foreground hover:text-sunrise-orange transition-colors text-sm underline decoration-dotted underline-offset-4"
+              >
+                Privacy Policy
+              </a>
+            </div>
           </motion.div>
 
           {/* Phone Mockup */}
@@ -75,7 +84,7 @@ export const FreshTrackFeature = () => {
             <div className="relative">
               {/* Glow Effect */}
               <div className="absolute inset-0 bg-gradient-radial from-sunrise-orange/30 via-sunrise-orange/10 to-transparent blur-3xl scale-150" />
-              
+
               {/* Phone Frame */}
               <motion.div
                 animate={{ y: [0, -15, 0] }}
