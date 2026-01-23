@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Play } from "lucide-react";
+import { Link } from "react-router-dom";
 import freshtrackDashboard from "@/assets/freshtrack-dashboard.png";
 
 export const FreshTrackFeature = () => {
@@ -64,12 +65,12 @@ export const FreshTrackFeature = () => {
                 <span className="relative z-10">Download on Google Play</span>
               </motion.a>
 
-              <a
-                href="/privacy/freshtrack"
+              <Link
+                to="/privacy/freshtrack"
                 className="text-muted-foreground hover:text-sunrise-orange transition-colors text-sm underline decoration-dotted underline-offset-4"
               >
                 Privacy Policy
-              </a>
+              </Link>
             </div>
           </motion.div>
 
