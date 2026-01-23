@@ -15,9 +15,11 @@ export const Footer = () => {
           {/* Logo & Copyright */}
           <div className="flex flex-col items-center md:items-start gap-4">
             <Link to="/" className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-sunrise-orange to-sunrise-amber flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-lg">A</span>
-              </div>
+              <img
+                src="/logo.png"
+                alt="Arkayen Labs"
+                className="w-14 h-14 object-contain"
+              />
               <span className="text-xl font-bold text-foreground">Arkayen Labs</span>
             </Link>
             <p className="text-muted-foreground text-sm">
@@ -33,7 +35,7 @@ export const Footer = () => {
             >
               Privacy Policy
             </Link>
-            
+
             <div className="flex items-center gap-4">
               {socialLinks.map((social) => (
                 <a
