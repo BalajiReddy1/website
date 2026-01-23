@@ -19,9 +19,11 @@ export const Navbar = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-sunrise-orange to-sunrise-amber flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-lg">A</span>
-            </div>
+            <img
+              src="/logo.png"
+              alt="Arkayen Labs"
+              className="w-10 h-10 object-contain"
+            />
             <span className="text-xl font-bold text-foreground">Arkayen Labs</span>
           </Link>
 
