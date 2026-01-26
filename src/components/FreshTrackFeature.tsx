@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Play } from "lucide-react";
 import { Link } from "react-router-dom";
-import freshtrackDashboard from "@/assets/freshtrack-dashboard.png";
+import freshtrackDashboard from "@/assets/freshtrack-dashboard1.jpeg";
 
 export const FreshTrackFeature = () => {
   return (
@@ -86,19 +86,17 @@ export const FreshTrackFeature = () => {
               {/* Glow Effect */}
               <div className="absolute inset-0 bg-gradient-radial from-sunrise-orange/30 via-sunrise-orange/10 to-transparent blur-3xl scale-150" />
 
-              {/* Phone Frame */}
+              {/* App Screenshot */}
               <motion.div
                 animate={{ y: [0, -15, 0] }}
                 transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                className="relative phone-mockup w-[280px] md:w-[320px]"
+                className="relative w-[280px] md:w-[320px]"
               >
-                <div className="rounded-[2.5rem] overflow-hidden bg-cosmic-navy-light">
-                  <img
-                    src={freshtrackDashboard}
-                    alt="FreshTrack App Dashboard"
-                    className="w-full h-auto"
-                  />
-                </div>
+                <img
+                  src={freshtrackDashboard}
+                  alt="FreshTrack App Dashboard"
+                  className="w-full h-auto rounded-3xl shadow-2xl"
+                />
               </motion.div>
             </div>
           </motion.div>

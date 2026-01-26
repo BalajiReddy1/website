@@ -272,7 +272,7 @@
 
   /* Phone Mockup */
   .phone-mockup {
-    @apply relative rounded-[3rem] p-2;
+    @apply relative rounded-[2.5rem] p-1;
     background: linear-gradient(
       145deg,
       hsl(var(--cosmic-navy-lighter)) 0%,
@@ -282,19 +282,6 @@
       0 50px 100px -20px hsl(var(--cosmic-navy) / 0.5),
       0 30px 60px -30px hsl(20, 100%, 60%, 0.3),
       inset 0 2px 4px hsl(var(--soft-white) / 0.1);
-  }
-
-  .phone-mockup::before {
-    content: '';
-    position: absolute;
-    top: 8px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 24px;
-    background: hsl(var(--cosmic-navy));
-    border-radius: 20px;
-    z-index: 10;
   }
 
   /* Text Gradient */
