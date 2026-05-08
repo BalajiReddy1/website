@@ -2,25 +2,25 @@ import { Link } from "react-router-dom";
 import { Github, Linkedin, Twitter } from "lucide-react";
 
 const socialLinks = [
-  { name: "Twitter", href: "https://twitter.com", icon: Twitter },
-  { name: "GitHub", href: "https://github.com", icon: Github },
+  { name: "Twitter",  href: "https://twitter.com",  icon: Twitter  },
+  { name: "GitHub",   href: "https://github.com/ArkayenLabs", icon: Github   },
   { name: "LinkedIn", href: "https://linkedin.com", icon: Linkedin },
 ];
 
 export const Footer = () => {
   return (
-    <footer className="relative py-16 border-t border-border/50">
+    <footer
+      className="relative py-14"
+      style={{ borderTop: "1px solid rgba(255,255,255,0.07)" }}
+    >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-          {/* Logo & Copyright */}
-          <div className="flex flex-col items-center md:items-start gap-4">
-            <Link to="/" className="flex items-center gap-3">
-              <img
-                src="/logo.png"
-                alt="Arkayen Labs"
-                className="w-14 h-14 object-contain"
-              />
-              <span className="text-xl font-bold text-foreground">Arkayen Labs</span>
+
+          {/* Logo & copyright */}
+          <div className="flex flex-col items-center md:items-start gap-3">
+            <Link to="/" className="flex items-center gap-3 group">
+              <img src="/logo.png" alt="Arkayen Labs" className="w-12 h-12 object-contain" />
+              <span className="text-lg font-bold text-foreground font-heading">Arkayen Labs</span>
             </Link>
             <p className="text-muted-foreground text-sm">
               © 2026 Arkayen Labs. All rights reserved.
@@ -28,25 +28,25 @@ export const Footer = () => {
           </div>
 
           {/* Links */}
-          <div className="flex items-center gap-8">
-            <Link
-              to="/privacy"
-              className="text-muted-foreground hover:text-foreground transition-colors text-sm"
-            >
-              Privacy Policy
-            </Link>
+          <div className="flex items-center gap-8 flex-wrap justify-center">
+          <div className="flex items-center gap-5 text-sm text-muted-foreground">
+              <Link to="/privacy" className="hover:text-foreground transition-colors">
+                Privacy Policy
+              </Link>
+            </div>
 
-            <div className="flex items-center gap-4">
-              {socialLinks.map((social) => (
+            <div className="flex items-center gap-3">
+              {socialLinks.map((s) => (
                 <a
-                  key={social.name}
-                  href={social.href}
+                  key={s.name}
+                  href={s.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-secondary/80 transition-all duration-300"
-                  aria-label={social.name}
+                  aria-label={s.name}
+                  className="w-9 h-9 rounded-full flex items-center justify-center text-muted-foreground hover:text-foreground transition-all duration-200 cursor-pointer"
+                  style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.08)" }}
                 >
-                  <social.icon size={18} />
+                  <s.icon size={16} />
                 </a>
               ))}
             </div>

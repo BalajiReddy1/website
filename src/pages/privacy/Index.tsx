@@ -88,24 +88,32 @@ const PrivacyIndex = () => {
                                 </div>
                             </motion.div>
 
-                            {/* Future Apps Placeholder */}
+                            {/* Pamoja Privacy */}
                             <motion.div
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 0.3 }}
-                                className="p-6 rounded-2xl border border-border/50 bg-card/50"
+                                className="p-6 rounded-2xl border border-border bg-card hover:border-sunrise-orange/50 transition-all duration-300 group"
                             >
                                 <div className="flex items-start gap-4">
-                                    <div className="w-12 h-12 rounded-xl bg-muted/50 flex items-center justify-center flex-shrink-0">
-                                        <FileText className="w-6 h-6 text-muted-foreground" />
+                                    <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: "rgba(34,197,94,0.12)" }}>
+                                        <FileText className="w-6 h-6" style={{ color: "#22C55E" }} />
                                     </div>
                                     <div className="flex-1">
-                                        <h2 className="text-xl font-semibold text-muted-foreground mb-2">
-                                            More Apps Coming Soon
+                                        <h2 className="text-xl font-semibold text-foreground mb-2">
+                                            Pamoja App
                                         </h2>
-                                        <p className="text-muted-foreground/70">
-                                            Privacy policies for upcoming apps will be added here.
+                                        <p className="text-muted-foreground mb-4">
+                                            Privacy policy for the Pamoja group step-tracking app.
                                         </p>
+                                        <Link
+                                            to="/privacy/pamoja"
+                                            className="inline-flex items-center gap-2 font-medium transition-colors"
+                                            style={{ color: "#22C55E" }}
+                                        >
+                                            View Policy
+                                            <ArrowLeft className="w-4 h-4 rotate-180 group-hover:translate-x-1 transition-transform" />
+                                        </Link>
                                     </div>
                                 </div>
                             </motion.div>
